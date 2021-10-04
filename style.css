@@ -93,15 +93,22 @@ body {
   display: flex;
   height: 600px;
   flex-basis: 50%;
+  background-size: 90%;
   background-image: url('../images/bg-intro-desktop.svg');
   background-repeat: no-repeat;
   background-position-x: 400%;
   background-position-y: 72%;
-  background-size: 90%;
   justify-content: center;
   margin-left: 100px;
 }
 
+.middle-menu p {
+  font-size: 15px;
+  width: 71%;
+  color: grey;
+  line-height: 1 rem;
+  margin-bottom: 40px;
+}
 .middle-menu img {
   position: relative;
   top: -150px;
@@ -119,14 +126,6 @@ body {
   word-spacing: 0.2rem;
 }
 
-.middle-menu p {
-  font-size: 15px;
-  width: 71%;
-  color: #696969;
-  line-height: 1 rem;
-  margin-bottom: 40px;
-}
-
 .facilities {
   padding: 110px;
   background: hsl(220, 16%, 96%);
@@ -142,7 +141,7 @@ body {
 }
 
 .facilities p {
-  color: #696969;
+  color: grey;
   font-size: 15px;
   line-height: 1rem;
   width: 51%;
@@ -163,7 +162,7 @@ body {
 }
 
 .facilities .flexbox-items p {
-  color: #696969;
+  color: grey;
   font-size: 14px;
   width: 100%;
 }
@@ -198,7 +197,7 @@ body {
 .information .flexbox .flexbox-items {
   display: flex;
   flex-direction: column;
-  flex-basis: 23%;
+  width: 23%;
   background-color: white;
   border-radius: 5px;
 }
@@ -212,7 +211,7 @@ body {
 .information .flexbox-items .caption {
   margin: 10% 10% 3% 10%;
   font-size: 10px;
-  color: #696969;
+  color: grey;
 }
 
 .information .flexbox-items h4 {
@@ -227,7 +226,7 @@ body {
 }
 
 .information .flexbox-items p {
-  color: #696969;
+  color: grey;
   font-size: 13px;
   width: 80%;
   padding-bottom: 10px;
@@ -372,7 +371,7 @@ footer .right-box {
     height: 300px;
     opacity: 100%;
     margin: 5% auto;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: hsl(0, 0%, 98%);
   }
 
@@ -384,6 +383,18 @@ footer .right-box {
     font-size: 20px;
     color: hsl(233, 26%, 24%);
     font-weight: 400;
+  }
+
+  .mobileNav-items li:hover {
+    padding: 8px 10px;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(
+      to right,
+      hsl(136, 65%, 51%),
+      hsl(192, 70%, 51%)
+    );
+    border-image-slice: 10;
+    cursor: pointer;
   }
 
   .upper-nav .checkbox:checked + .openNav {
@@ -421,7 +432,7 @@ footer .right-box {
     text-align: center;
     margin: -550px 30px 15px 0;
     line-height: 50px;
-    word-spacing: 0.1em;
+    word-spacing: 0.1rem;
   }
 
   .middle-menu p {
@@ -479,41 +490,43 @@ footer .right-box {
     font-size: 17px;
   }
 
-  .informations {
+  .information {
+    height: auto;
     padding-bottom: 15%;
     align-items: center;
   }
 
-  .informations h1 {
+  .information h1 {
     margin-top: 25%;
     margin-bottom: 20px;
     text-align: center;
     margin-left: 0;
     font-weight: 400;
   }
-  .informations .flexbox {
+  .information .flexbox {
     display: flex;
+    flex-direction: column;
     margin: auto;
     justify-content: space-between;
     width: 100%;
-    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  .informations .flexbox .flexbox-items {
+  .information .flexbox .flexbox-items {
     align-self: center;
-    flex: 1 0 100%;
+    flex-direction: column;
     width: 80%;
     margin-bottom: 10%;
   }
 
-  .informations .flexbox-items .caption {
+  .information .flexbox-items .caption {
     font-size: 11px;
   }
 
-  .informations .flexbox-items h4 {
+  .information .flexbox-items h4 {
     font-size: 18px;
   }
 
-  .informations .flexbox-items p {
+  .information .flexbox-items p {
     font-size: 14px;
   }
 
